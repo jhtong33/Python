@@ -310,7 +310,7 @@ def plot_null_PCA_angle_small(NET, STA, df, stlat, stlon, SAVEpath, YearRange, v
             BAZ.append(baz)
             
             evtlog = df['Event'].values[i]
-            cmd = "echo %(evtlog)s >> %(SAVEpath)s/%(NET)s.%(STA)s/%(YearRange)s/plot_null_PCA_angle_small_%(YearRange)s_v{ver}.log" % locals()
+            cmd = "echo %(evtlog)s >> %(SAVEpath)s/%(NET)s.%(STA)s/%(YearRange)s/plot_null_PCA_angle_small_%(YearRange)s_v%(ver)f.log" % locals()
             os.system(cmd )            
     for key in SCcluster.keys():
         length = len(SCcluster[key])
